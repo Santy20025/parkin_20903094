@@ -11,23 +11,24 @@ public class Pago {
     //Atributos de relacion:
     public Vehiculo vehiculo;
     public Cupo cupo;
+    public Empleado empleado;
 
     //Constructor 
     public Pago() {
     }
 
-    //Constructor parametrizado
-    public Pago(LocalDateTime fechaHoraInicio, 
-                LocalDateTime fechaHoraSalida, 
-                Double valor, 
-                Vehiculo vehiculo,
-                Cupo cupo) {
+    public Pago(LocalDateTime fechaHoraInicio, LocalDateTime fechaHoraSalida, Double valor, Vehiculo vehiculo,
+            Cupo cupo, Empleado empleado) {
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraSalida = fechaHoraSalida;
         this.valor = valor;
         this.vehiculo = vehiculo;
         this.cupo = cupo;
-    } 
+        this.empleado = empleado;
+    }
+
+    //Constructor parametrizado
+    
 
     
     
