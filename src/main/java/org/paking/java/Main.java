@@ -26,6 +26,9 @@ public class Main {
 
         Vehiculo carrito2 = new Vehiculo("FMD 388", TipoVehiculo.TAXI );
 
+        Vehiculo motico = new Vehiculo(); 
+        motico.setPlaca("MMR 567");
+
         //Crear (instanciar) un cliente 
         Cliente cliente1 = new Cliente("Santiago", "Borda", 1021667827L);
         Cliente cliente2 = new Cliente("Paco", "Borda", 1021667829L);
@@ -89,14 +92,15 @@ public class Main {
         //  - fecha y hora de inicio
         //  - fecha y horan de fin
         //  - cupo(nombre)
-        System.out.println("|placa:" + p.vehiculo.placa + "|" );
-        System.out.println("|valor:" + p.valor + "|");
-        System.out.println("|fecha hora entrada:" 
-                            + p.fechaHoraInicio.toString() + "|");
-        System.out.println("|fecha hora de salida: " 
-                            + p.fechaHoraSalida.toString() + "|");
-        System.out.println("|Cupo: " + p.cupo.nombre + "|");
-        System.out.println("|empleado:" + p.empleado.codigo + "|");
+        System.out.println("|placa:" + p.getVehiculo().getPlaca() + "|" + 
+                           "|valor:" + p.getValor() + "|" + 
+                           "|fecha hora entrada:" 
+                            + p.getFechaHoraInicio().toString() + "|" +
+                            "|fecha hora de salida: " 
+                            + p.getFechaHoraSalida().toString() + "|" + 
+                            "|Cupo: " + p.getCupo().getNombre() + "|" +
+                            "|empleado:" + p.getEmpleado().getCodigo() + "|"
+        );
     }
     }
    
